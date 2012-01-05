@@ -2,7 +2,7 @@ Package: com.rpetrich.dietbar
 Priority: optional
 Section: Tweaks
 Architecture: iphoneos-arm
-Version: 0.1
+Version: 1.0
 Description: Puts navigation bars on a diet!
 Name: DietBar
 Depends: firmware (>= 3.0), mobilesubstrate
