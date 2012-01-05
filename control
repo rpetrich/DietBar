@@ -6,4 +6,10 @@ Version: 0.1
 Description: Puts navigation bars on a diet!
 Name: DietBar
 Depends: firmware (>= 3.0), mobilesubstrate
-Author: Ryan Petrich
+Author: Ryan Petrich <rpetrich+dietbar@gmail.com>
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=dietbarData
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=dietbarData
+Sponsor: thebigboss.org <http://thebigboss.org>
+Tag: purpose::extension
+dev: rpetrich
