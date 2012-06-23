@@ -5,7 +5,7 @@ Architecture: iphoneos-arm
 Version: 1.0
 Description: Puts navigation bars on a diet!
 Name: DietBar
-Depends: firmware (>= 3.0), mobilesubstrate
+Depends: firmware (>= 3.0), mobilesubstrate, preferenceloader, applist (>= 1.4.3)
 Author: Ryan Petrich <rpetrich+dietbar@gmail.com>
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=dietbarData

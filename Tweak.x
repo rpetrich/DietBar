@@ -80,13 +80,20 @@
 %ctor
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	%init;
 	NSString *bundleIdentifier = [NSBundle mainBundle].bundleIdentifier;
-	if ([bundleIdentifier isEqualToString:@"com.atebits.Tweetie2"])
-		%init(Twitter);
-	else if ([bundleIdentifier isEqualToString:@"com.tapbots.Tweetbot"])
-		%init(Tweetbot);
-	else if ([bundleIdentifier isEqualToString:@"com.linkedin.LinkedIn"])
-		%init(LinkedIn);
+	if (bundleIdentifier) {
+		NSString *key = [@"DBEnabled-" stringByAppendingString:bundleIdentifier];
+		NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:@"/var/mobile/Library/Preferences/com.rpetrich.dietbar.plist"];
+		id temp = [settings objectForKey:key];
+		if (!temp || [temp boolValue]) {
+			%init;
+			if ([bundleIdentifier isEqualToString:@"com.atebits.Tweetie2"])
+				%init(Twitter);
+			else if ([bundleIdentifier isEqualToString:@"com.tapbots.Tweetbot"])
+				%init(Tweetbot);
+			else if ([bundleIdentifier isEqualToString:@"com.linkedin.LinkedIn"])
+				%init(LinkedIn);
+		}
+	}
 	[pool drain];
 }

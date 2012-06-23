@@ -1,0 +1,32 @@
+entry = {
+  bundle = AppList;
+  cell = PSLinkCell;
+  icon = "/Library/PreferenceLoader/Preferences/DietBar.png";
+  isController = 1;
+  label = DietBar;
+  ALSettingsPath = "/var/mobile/Library/Preferences/com.rpetrich.dietbar.plist";
+  ALSettingsKeyPrefix = "DBEnabled-";
+  ALChangeNotification = "com.rpetrich.dietbar.settingschanged";
+  ALSettingsDefaultValue = 1;
+  ALSectionDescriptors = (
+    {
+      items = ();
+      "footer-title" = "Kill app from multitasking switcher and relaunch for settings to take effect.";
+    },
+  	{
+  	  title = "System Applications";
+  	  predicate = "isSystemApplication = TRUE AND isWebApplication = FALSE";
+  	  "cell-class-name" = "ALSwitchCell";
+  	  "icon-size" = 29;
+  	  "suppress-hidden-apps" = 1;
+  	},
+  	{
+  	  title = "User Applications";
+  	  predicate = "isSystemApplication = FALSE AND isWebApplication = FALSE";
+  	  "cell-class-name" = "ALSwitchCell";
+  	  "icon-size" = 29;
+  	  "suppress-hidden-apps" = 1;
+  	  "footer-title" = "© 2011-12 Ryan Petrich";
+  	}
+  );
+};
